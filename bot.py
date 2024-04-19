@@ -26,16 +26,6 @@ async def hello_cmd(message: types.Message) :
     keyboard = types.ReplyKeyboardMarkup (keyboard=kb, resize_keyboard=True, input_field_placeholder="выберете, что вам нужно")
     await message.answer( text=f"hi, {message.from_user.username}", reply_markup=keyboard)
 
-@dp.message(F.text.lower() == "распорядок дня")
-async def with_day(message : types.Message):
-    kd = [
-        [types.KeyboardButton(text="Создание нового дела")],
-        [types.KeyboardButton(text="Удалить Запись")],
-        [types.KeyboardButton(text="Меню")],
-    ]
-keyboard = types.ReplyKeyboardMarkup(keyboard=kd,resize_keyboard=True,input_field_placeholder="выберете, что делать дальше" )
-
-# bot.polling(none_stop=True)
 
 async def main() :
     print("Start")
