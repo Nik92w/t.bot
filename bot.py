@@ -7,7 +7,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram import F
 
 #создаем бота
-bot = Bot(token="7103945376:AAFH7fgLHDRRcvjzN627-6Cp7LfuzJEiyX0")
+bot = Bot(token="") #токен сохраню в заметках, чтобы злые дяди ничего случаем не поменяли
 dp = Dispatcher()
 
 #Его реакция на команду /start
