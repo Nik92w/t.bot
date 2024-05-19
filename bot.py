@@ -6,13 +6,16 @@ import asyncio
 from aiogram.filters import CommandStart, Command
 from aiogram import F
 
+#создаем бота
 bot = Bot(token="7103945376:AAFH7fgLHDRRcvjzN627-6Cp7LfuzJEiyX0")
 dp = Dispatcher()
 
+#Его реакция на команду /start
 @dp.message(CommandStart())
 async def start_cmd(message: types.Message):
     await message.answer('Привяо! Напиши сюда название города, и я выдам тебе его прогноз погоды на сегодня!!')
 
+#Его реакция на все остальные сообщения
 @dp.message()
 async def get_weather(message: types.Message):
         
